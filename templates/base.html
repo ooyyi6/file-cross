@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<title>{% block title %}AppSec{% endblock title %}</title>
+{% block css %}{% endblock css %}
+<link href="../static/css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body >
+<div id="header">
+{% block header %}{% endblock header %}
+<table width="1000" height="100" border="0" align="center">
+<tr>
+	<td height="70" colspan="3" align="center" valign="middle" background="../static/images/header.jpg">
+	<div align="center">
+		<h1>AppSec - Powered By HK</h1>
+	</div>
+	</td>
+</tr>
+</table>
+</div>
+<div id="body">
+<div class="nav">
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><img src="../static/images/task.png" width="20" height="20" /><a href="/task" >Task</a></li>
+	</ul>
+</div>
+<div id="content">
+{% block content %}{% endblock content %}
+</div>
+</div>
+<div id="footer">
+{% block footer %}{% endblock footer%}
+<div align="center"><a href="mailto:daoyuan0x@gmail.com" >Contact us</a></div>
+</div>
+</body>
+</html>

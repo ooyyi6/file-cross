@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+  
+{% block title %}Log - AppSec{% endblock title %}
+
+{% block content %}
+<p id="content-p"><strong><font color="#990000" size="+1">Logs</font> of task <a href="/task?kid={{ taskkey }}" >{{ taskid }}</a></strong></p>
+<hr />
+<table border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<thead bgcolor="#FFFFFF">
+	<tr>
+		<th rowspan="2">Package</th>
+		<th colspan="2">Attack 0</th>
+		<th rowspan="2">Attack 1</th>
+		<th colspan="2">Attack 2</th>
+		<th colspan="2">Attack 3</th>
+		<th rowspan="2">FileSD</th>
+		<th rowspan="2">FilePri</th>
+		<th rowspan="2">FileJS</th>
+	</tr>
+	<tr>
+		<th>&nbsp;&nbsp; 4.0 &nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp; 4.3 &nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp; 4.0 &nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp; 4.3 &nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp; 4.0 &nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp; 4.3 &nbsp;&nbsp;</th>
+	</tr>
+</thead>
+<tbody bgcolor="#FFFFFF">
+	{% for out in outs %}
+	<tr>
+        <td><a href="https://play.google.com/store/apps/details?id={{out.pkg}}" target="_blank">{{out.pkg}}</a></td>
+        <td>
+            {% if out.atk0A == 'Y' %}
+            <font color="red">
+            <b>{{ out.atk0A }}</b>
+            </font>
+            {% else %}
+            {{ out.atk0A }}
+            {% endif %}
+        </td>
+        <td>
+            {% if out.atk0B == 'Y' %}
+            <font color="red">
+            <b>{{ out.atk0B }}</b>
+            </font>
+            {% else %}
+            {{ out.atk0B }}
+            {% endif %}
+        </td>
+        <td>
+            {% if out.atk1 == 'Y' %}
+            <font color="red">
+            <b>{{ out.atk1 }}</b>
+            </font>
+            {% else %}
+            {{ out.atk1 }}
+            {% endif %}
+        </td>
+        <td>
+            {% if out.atk2A == 'Y' %}
+            <font color="red">
+            <b>{{ out.atk2A }}</b>
+            </font>
+            {% else %}
+            {{ out.atk2A }}
+            {% endif %}
+        </td>
+        <td>
+            {% if out.atk2B == 'Y' %}
+            <font color="red">
+            <b>{{ out.atk2B }}</b>
+            </font>
+            {% else %}
+            {{ out.atk2B }}
+            {% endif %}
+        </td>
+        <td>
+            {% if out.atk3A == 'Y' %}
+            <font color="red">
+            <b>{{ out.atk3A }}</b>
+            </font>
+            {% else %}
+            {{ out.atk3A }}
+            {% endif %}
+        </td>
+        <td>
+            {% if out.atk3B == 'Y' %}
+            <font color="red">
+            <b>{{ out.atk3B }}</b>
+            </font>
+            {% else %}
+            {{ out.atk3B }}
+            {% endif %}
+        </td>
+        <td>
+            {% if out.atk4 == 'Y' %}
+            <font color="red">
+            <b>{{ out.atk4 }}</b>
+            </font>
+            {% else %}
+            {{ out.atk4 }}
+            {% endif %}
+        </td>
+        <td>
+            {% if out.atk5 == 'Y' %}
+            <font color="red">
+            <b>{{ out.atk5 }}</b>
+            </font>
+            {% else %}
+            {{ out.atk5 }}
+            {% endif %}
+        </td>
+        <td>
+            {% if out.atk6 == 'Y' %}
+            <font color="red">
+            <b>{{ out.atk6 }}</b>
+            </font>
+            {% else %}
+            {{ out.atk6 }}
+            {% endif %}
+        </td>
+	</tr>
+	{% endfor %}
+</tbody>
+</table>
+{% endblock content %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+  
+{% block title %}Task - AppSec{% endblock title %}
+
+{% block content %}
+{% if isall %}
+<p id="content-p"><strong>All <font color="#990000" size="+1"> Tasks </font> in database</strong></p>
+{% else %}
+<p id="content-p"><strong>One <font color="#990000" size="+1"> Task </font></strong></p>
+{% endif %}
+<hr />
+<table border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<thead>
+	<tr bgcolor="#FFFFFF">
+		<th id="content-head" scope="col">Task Id</th>
+		<th id="content-head" scope="col">Start</th>
+		<th id="content-head" scope="col">End</th>
+		<th id="content-head" scope="col">Status</th>
+	</tr>
+</thead>
+<tbody >
+	{% for task in tasks %}
+	<tr bgcolor="#FFFFFF">
+        <td id="content-td1"><a href="/log?kid={{ task.key }}" >{{ task.key.id }}</a></td>
+		<td id="content-td1">{{ task.start }}</td>
+		<td id="content-td1">{{ task.end }}</td>
+        <td id="content-td1">
+        {% if task.isdone %}
+            Finished
+        {% else %}
+            Not done
+        {% endif %}
+        </td>
+	</tr>
+	{% endfor %}
+</tbody>
+</table>
+{% endblock content %}

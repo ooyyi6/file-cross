@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+li  { list-style: none; }
+img { border: none; }
+th, td { text-align:center; }
+
+body {
+	width: 1000px; 
+    margin: 0 auto;}
+	
+/* 头的样式 ****************************************/
+
+#header a {	
+	text-decoration: none;
+	color: #333333; }
+#header a:hover { color: #888; }
+
+/* nav */
+.nav {
+	color: #B6B6B6;
+	height: 40px;
+    line-height: 40px;
+	background: url("../images/navBg.png") repeat-x;
+	overflow: hidden;
+	position: relative;
+}
+
+.nav ul li {
+	float: left;
+}
+
+.nav ul li img {
+	float: left;
+	padding: 10px 0 10px 20px;
+}
+
+.nav ul li a {
+	float: left;
+	color: #B6B6B6;
+	text-decoration: none;
+	background: url("../images/liBg.gif") no-repeat right;
+	padding: 0 20px 0 20px;
+}
+
+.nav ul li a:hover {
+	color: #FFF;
+}
+
+/* 内容层的样式 ****************************************/
+#content {
+	width: 960px; 
+    margin: 20px auto; }
+
+#content-p {
+    margin: 10px auto; }
+
+#content table {
+	width: 960px; 
+    margin: 10px auto; }
+
+#content-head {
+    width: 240px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px; }
+
+#content-td1 {
+    width: 240px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px; }
+
+#content-td2 {
+    width: 100px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px; }
+
+
+/* 底层的样式 ****************************************/
+#footer {
+	width: 1000px;
+	margin-right: 85px;
+	margin-top: 40px; }
+
+#footer a { text-decoration: none ;
+    color:#000000; }
