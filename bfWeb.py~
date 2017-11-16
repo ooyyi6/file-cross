@@ -52,7 +52,7 @@ Page functions
 class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('File Cross Attack!')
+        self.response.write('Hello world!')
 
 class TaskPage(webapp2.RequestHandler):
     def get(self):
